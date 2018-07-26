@@ -14,6 +14,9 @@
 		4289BEDE2109A9C40014BD6E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4289BEDC2109A9C40014BD6E /* LaunchScreen.storyboard */; };
 		4289BEE92109A9C40014BD6E /* MineSweeperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4289BEE82109A9C40014BD6E /* MineSweeperTests.swift */; };
 		4289BEF42109A9C40014BD6E /* MineSweeperUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4289BEF32109A9C40014BD6E /* MineSweeperUITests.swift */; };
+		4289BF022109ACC40014BD6E /* SquareButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4289BF012109ACC40014BD6E /* SquareButton.swift */; };
+		4289BF042109ACF70014BD6E /* Square.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4289BF032109ACF70014BD6E /* Square.swift */; };
+		4289BF062109AD130014BD6E /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4289BF052109AD130014BD6E /* Board.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		4289BEEF2109A9C40014BD6E /* MineSweeperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MineSweeperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4289BEF32109A9C40014BD6E /* MineSweeperUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MineSweeperUITests.swift; sourceTree = "<group>"; };
 		4289BEF52109A9C40014BD6E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4289BF012109ACC40014BD6E /* SquareButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareButton.swift; sourceTree = "<group>"; };
+		4289BF032109ACF70014BD6E /* Square.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Square.swift; sourceTree = "<group>"; };
+		4289BF052109AD130014BD6E /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				4289BEDA2109A9C40014BD6E /* Assets.xcassets */,
 				4289BEDC2109A9C40014BD6E /* LaunchScreen.storyboard */,
 				4289BEDF2109A9C40014BD6E /* Info.plist */,
+				4289BF012109ACC40014BD6E /* SquareButton.swift */,
+				4289BF032109ACF70014BD6E /* Square.swift */,
+				4289BF052109AD130014BD6E /* Board.swift */,
 			);
 			path = MineSweeper;
 			sourceTree = "<group>";
@@ -259,8 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4289BF042109ACF70014BD6E /* Square.swift in Sources */,
 				4289BED62109A9C40014BD6E /* ViewController.swift in Sources */,
+				4289BF062109AD130014BD6E /* Board.swift in Sources */,
 				4289BED42109A9C40014BD6E /* AppDelegate.swift in Sources */,
+				4289BF022109ACC40014BD6E /* SquareButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
