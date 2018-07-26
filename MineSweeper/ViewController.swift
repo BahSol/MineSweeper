@@ -55,15 +55,18 @@ class ViewController: UIViewController {
                 
                 let square = board.squares[row][col]
                 
-                let squareSize:CGFloat = self.boardView.frame.width / CGFloat(BOARD_SIZE)
+                if (boardView != nil)
+                {
+                    let squareSize:CGFloat = self.boardView.frame.width / CGFloat(BOARD_SIZE)
+                    
+                    let squareButton = SquareButton(squareModel: square, squareSize: squareSize)
+                    squareButton.setTitle("[x]", for: .normal)
+                    squareButton.setTitleColor(.darkGray, for: .normal)
+                    squareButton.addTarget(self, action: Selector("squareButtonPressed:"), for: .touchUpInside)
+                    self.boardView.addSubview(squareButton)
                 
-                let squareButton = SquareButton(squareModel: square, squareSize: squareSize);
-                squareButton.setTitle("[x]", for: .normal)
-                squareButton.setTitleColor(.darkGray, for: .normal)
-                squareButton.addTarget(self, action: Selector("squareButtonPressed:"), for: .touchUpInside)
-                self.boardView.addSubview(squareButton)
-                
-                self.squareButtons.append(squareButton)
+                    self.squareButtons.append(squareButton)
+                }
             }
         }
     }
