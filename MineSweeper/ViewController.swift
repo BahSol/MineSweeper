@@ -73,7 +73,7 @@ class ViewController: UIViewController {
         self.board.resetBoard()
         // iterates through each button and resets the text to the default value
         for squareButton in self.squareButtons {
-            squareButton.setTitle("[x]", forState: .Normal)
+            squareButton.setTitle("[x]", for: .normal)
         }
     }
     
@@ -82,11 +82,11 @@ class ViewController: UIViewController {
         self.resetBoard()
         self.timeTaken = 0
         self.moves = 0
-        self.oneSecondTimer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("oneSecond"), userInfo: nil, repeats: true)
+        self.oneSecondTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: Selector("oneSecond"), userInfo: nil, repeats: true)
     }
     
     func oneSecond() {
-        self.timeTaken++
+        self.timeTaken = self.timeTaken + 1
     }
     
     override func didReceiveMemoryWarning() {
@@ -97,7 +97,7 @@ class ViewController: UIViewController {
     //MARK: Button Actions
     
     @IBAction func newGamePressed() {
-        println("new game")
+        print("new game")
         self.endCurrentGame()
         self.startNewGame()
     }
@@ -108,8 +108,8 @@ class ViewController: UIViewController {
         
         if !sender.square.isRevealed {
             sender.square.isRevealed = true
-            sender.setTitle("\(sender.getLabelText())", forState: .Normal)
-            self.moves++
+            sender.setTitle("\(sender.getLabelText())", for: .normal)
+            self.moves = self.moves + 1
         }
         
         if sender.square.isMineLocation {
@@ -121,7 +121,7 @@ class ViewController: UIViewController {
         self.endCurrentGame()
         // show an alert when you tap on a mine
         var alertView = UIAlertView()
-        alertView.addButtonWithTitle("New Game")
+        alertView.addButton(withTitle: "New Game")
         alertView.title = "BOOM!"
         alertView.message = "You tapped on a mine."
         alertView.show()
