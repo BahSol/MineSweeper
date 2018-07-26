@@ -62,7 +62,7 @@ class ViewController: UIViewController {
                     let squareButton = SquareButton(squareModel: square, squareSize: squareSize)
                     squareButton.setTitle("[x]", for: .normal)
                     squareButton.setTitleColor(.darkGray, for: .normal)
-                    squareButton.addTarget(self, action: Selector("squareButtonPressed:"), for: .touchUpInside)
+                    // squareButton.addTarget(self, action: Selector("squareButtonPressed:"), for: .touchUpInside)
                     self.boardView.addSubview(squareButton)
                 
                     self.squareButtons.append(squareButton)
@@ -85,7 +85,7 @@ class ViewController: UIViewController {
         self.resetBoard()
         self.timeTaken = 0
         self.moves = 0
-        self.oneSecondTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: Selector("oneSecond"), userInfo: nil, repeats: true)
+        // self.oneSecondTimer = Timer(timeInterval: 1.0, target: self, selector: Selector("oneSecond"), userInfo: nil, repeats: true)
     }
     
     func oneSecond() {
@@ -137,7 +137,7 @@ class ViewController: UIViewController {
     }
     
     func endCurrentGame() {
-        self.oneSecondTimer!.invalidate()
+        // self.oneSecondTimer!.invalidate()
         self.oneSecondTimer = nil
     }
     

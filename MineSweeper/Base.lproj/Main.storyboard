@@ -18,26 +18,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lgR-8s-Upj">
-                                <rect key="frame" x="67" y="72" width="240" height="446"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgR-8s-Upj">
+                                <rect key="frame" x="67" y="72" width="240" height="434"/>
                                 <color key="backgroundColor" red="1" green="0.98253809369422274" blue="0.7388516215390224" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" red="0.52654105389406181" green="0.16227502886990963" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </view>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="f5V-w5-GIz">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5V-w5-GIz">
+                                <rect key="frame" x="16" y="611" width="343" height="44"/>
                                 <items>
-                                    <barButtonItem title="New Game" id="io6-Do-oCF"/>
+                                    <barButtonItem title="New Game" id="io6-Do-oCF">
+                                        <connections>
+                                            <action selector="newGamePressed" destination="BYZ-38-t0r" id="LC6-7R-7O6"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                                 <color key="tintColor" red="0.61082062132221826" green="0.092830918473087998" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </toolbar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Moves: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE4-aJ-xOA">
-                                <rect key="frame" x="67" y="535" width="59.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moves: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OE4-aJ-xOA">
+                                <rect key="frame" x="67" y="533" width="59.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Time: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeD-Ki-wjb">
-                                <rect key="frame" x="260" y="535" width="47" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KeD-Ki-wjb">
+                                <rect key="frame" x="260" y="533" width="47" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -45,16 +49,27 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OE4-aJ-xOA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87.5" id="4V2-7J-47c"/>
-                            <constraint firstItem="KeD-Ki-wjb" firstAttribute="top" secondItem="lgR-8s-Upj" secondAttribute="bottom" id="7j6-3N-2xb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="f5V-w5-GIz" secondAttribute="bottom" constant="12" id="15N-VL-0aL"/>
+                            <constraint firstItem="lgR-8s-Upj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="4KY-sd-fYb"/>
+                            <constraint firstItem="OE4-aJ-xOA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="4V2-7J-47c"/>
+                            <constraint firstItem="KeD-Ki-wjb" firstAttribute="top" secondItem="lgR-8s-Upj" secondAttribute="bottom" constant="27" id="7j6-3N-2xb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="f5V-w5-GIz" secondAttribute="trailing" constant="16" id="9Oe-Rd-mDG"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KeD-Ki-wjb" secondAttribute="trailing" constant="68" id="Jxn-Fx-Y96"/>
-                            <constraint firstItem="OE4-aJ-xOA" firstAttribute="top" secondItem="lgR-8s-Upj" secondAttribute="bottom" id="ahM-q9-AwV"/>
+                            <constraint firstItem="OE4-aJ-xOA" firstAttribute="top" secondItem="lgR-8s-Upj" secondAttribute="bottom" constant="27" id="ahM-q9-AwV"/>
                             <constraint firstItem="KeD-Ki-wjb" firstAttribute="leading" secondItem="OE4-aJ-xOA" secondAttribute="trailing" constant="133.5" id="dII-nr-lBA"/>
-                            <constraint firstItem="f5V-w5-GIz" firstAttribute="top" secondItem="KeD-Ki-wjb" secondAttribute="bottom" constant="84" id="giE-1p-QJO"/>
-                            <constraint firstItem="f5V-w5-GIz" firstAttribute="top" secondItem="OE4-aJ-xOA" secondAttribute="bottom" constant="84" id="u3V-S8-4y4"/>
+                            <constraint firstItem="f5V-w5-GIz" firstAttribute="top" secondItem="KeD-Ki-wjb" secondAttribute="bottom" constant="57" id="giE-1p-QJO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lgR-8s-Upj" secondAttribute="trailing" constant="68" id="hJw-ax-Il3"/>
+                            <constraint firstItem="f5V-w5-GIz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oiy-6t-Ld4"/>
+                            <constraint firstItem="f5V-w5-GIz" firstAttribute="top" secondItem="OE4-aJ-xOA" secondAttribute="bottom" constant="57" id="u3V-S8-4y4"/>
+                            <constraint firstItem="lgR-8s-Upj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="vV0-om-JF1"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="boardView" destination="lgR-8s-Upj" id="pKf-rW-Gz0"/>
+                        <outlet property="movesLabel" destination="OE4-aJ-xOA" id="ck5-SK-UIW"/>
+                        <outlet property="timeLabel" destination="KeD-Ki-wjb" id="aMa-7a-SGI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
