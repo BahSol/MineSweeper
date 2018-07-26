@@ -59,8 +59,8 @@ class ViewController: UIViewController {
                 
                 let squareButton = SquareButton(squareModel: square, squareSize: squareSize);
                 squareButton.setTitle("[x]", for: .normal)
-                squareButton.setTitleColor(UIColor.darkGrayColor(), for: .normal)
-                squareButton.addTarget(self, action: "squareButtonPressed:", forControlEvents: .touchUpInside)
+                squareButton.setTitleColor(.darkGray, for: .normal)
+                squareButton.addTarget(self, action: Selector("squareButtonPressed:"), for: .touchUpInside)
                 self.boardView.addSubview(squareButton)
                 
                 self.squareButtons.append(squareButton)
