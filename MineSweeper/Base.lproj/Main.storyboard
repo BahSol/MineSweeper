@@ -26,7 +26,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f5V-w5-GIz">
                                 <rect key="frame" x="16" y="611" width="343" height="44"/>
                                 <items>
-                                    <barButtonItem title="New Game" id="io6-Do-oCF">
+                                    <barButtonItem title="New" id="io6-Do-oCF">
                                         <color key="tintColor" red="0.032565576424870457" green="0.020463699476325641" blue="0.016066288631596481" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="newGamePressed" destination="BYZ-38-t0r" id="LC6-7R-7O6"/>
